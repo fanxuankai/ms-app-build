@@ -17,6 +17,7 @@ jobs:
         with:
           lane: tf1
         env:
+          APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
           FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
@@ -35,6 +36,7 @@ jobs:
         with:
           lane: tf2
         env:
+          APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
           FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
@@ -53,6 +55,7 @@ jobs:
         with:
           lane: tf3
         env:
+          APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
           FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
