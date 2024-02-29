@@ -1,0 +1,58 @@
+name: build
+on:
+  workflow_dispatch:
+jobs:
+  tf1:
+    name: Deploying app to TestFlight 1
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.REPOSITORY }}
+          token: ${{ secrets.PERSON_ACCESS_TOKEN }}
+          ref: main
+      - name: Deploy iOS Beta to TestFlight via Fastlane
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: tf1
+        env:
+          MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+          FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
+  tf2:
+    name: Deploying app to TestFlight 2
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.REPOSITORY }}
+          token: ${{ secrets.PERSON_ACCESS_TOKEN }}
+          ref: main
+      - name: Deploy iOS Beta to TestFlight via Fastlane
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: tf2
+        env:
+          MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+          FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
+  tf3:
+    name: Deploying app to TestFlight 3
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.REPOSITORY }}
+          token: ${{ secrets.PERSON_ACCESS_TOKEN }}
+          ref: main
+      - name: Deploy iOS Beta to TestFlight via Fastlane
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: tf3
+        env:
+          MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+          FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'

@@ -1,0 +1,9 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :test do
+    commit = last_git_commit
+    changelog = commit[:message]
+    UI.message "更新记录: #{changelog}"
+  end
+end
