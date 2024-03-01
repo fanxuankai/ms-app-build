@@ -1,0 +1,15 @@
+name: Merge main branch to dev
+on:
+  push:
+    branches: [ 'main' ]
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge main -> dev
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: dev
+          github_token: ${{ secrets.PERSON_ACCESS_TOKEN }}
