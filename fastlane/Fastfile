@@ -7,7 +7,7 @@ platform :ios do
     UI.message "更新记录: #{changelog}"
 
     changelog = changelog_from_git_commits(
-      commits_count: 2,
+      commits_count: 1,
       pretty: "- (%ae) %s",
       date_format: "short",
       match_lightweight_tag: false,
