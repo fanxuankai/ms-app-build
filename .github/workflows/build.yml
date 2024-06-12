@@ -12,8 +12,6 @@ jobs:
           repository: ${{ secrets.REPOSITORY }}
           token: ${{ secrets.PERSON_ACCESS_TOKEN }}
           ref: main
-      - name: Patch Xcode 15.4
-        uses: 2sem/patch-package-resolved@v1
       - name: Deploy iOS Beta to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -33,8 +31,6 @@ jobs:
           repository: ${{ secrets.REPOSITORY }}
           token: ${{ secrets.PERSON_ACCESS_TOKEN }}
           ref: app2
-      - name: Patch Xcode 15.4
-        uses: 2sem/patch-package-resolved@v1
       - name: Deploy iOS Beta to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -54,8 +50,6 @@ jobs:
           repository: ${{ secrets.REPOSITORY }}
           token: ${{ secrets.PERSON_ACCESS_TOKEN }}
           ref: app3
-      - name: Patch Xcode 15.4
-        uses: 2sem/patch-package-resolved@v1
       - name: Deploy iOS Beta to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -75,8 +69,6 @@ jobs:
           repository: ${{ secrets.REPOSITORY }}
           token: ${{ secrets.PERSON_ACCESS_TOKEN }}
           ref: app4
-      - name: Patch Xcode 15.4
-        uses: 2sem/patch-package-resolved@v1
       - name: Deploy iOS Beta to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
         with:
